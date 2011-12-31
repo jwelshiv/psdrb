@@ -1,0 +1,33 @@
+== PSDrb
+Something I set aside from some quick fun with rmagick and psds. 
+Dumps a png for all layers, and then a separate png for each layer individually.
+
+
+== Prereq
+
+    gem install rmagick
+
+    
+
+== Usage
+
+    irb
+>
+
+    require './psd'
+
+=> true
+  
+    psd = Psd.new 'test.psd'
+
+loading test.psd
+4 layers loaded
+ => test.psd 
+  
+    psd.export_layers
+
+{:format=>"png", :filename=>"Layer", :path=>""}
+{:format=>"png", :filename=>"Layer 0", :path=>""}
+{:format=>"png", :filename=>"Layer 1", :path=>""}
+{:format=>"png", :filename=>"TEST", :path=>""}
+ => [test.psd=>Layer.png PSD 300x300 300x300+0+0 PseudoClass 23c 8-bit, test.psd=>Layer 0.png PSD 150x300 150x300+0+0 PseudoClass 1c 8-bit, test.psd=>Layer 1.png PSD 150x300 150x300+150+0 PseudoClass 1c 8-bit, test.psd=>TEST.png PSD 139x42 139x42+81+124 PseudoClass 16c 8-bit] 
