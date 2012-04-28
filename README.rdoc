@@ -1,5 +1,5 @@
 == PSDrb
-Something I set aside from some quick fun with rmagick and psds. 
+Something I set aside from some quick play with rmagick and psds. 
 
 Dumps a png for canvas, and separate pngs for each layer individually.
 
